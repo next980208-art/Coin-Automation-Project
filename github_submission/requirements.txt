@@ -1,0 +1,8 @@
+ccxt
+pandas
+kafka-python
+apache-flink
+xgboost
+scikit-learn
+pyarrow
+websockets
