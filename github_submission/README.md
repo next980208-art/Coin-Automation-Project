@@ -145,3 +145,29 @@ WebSocket으로 호가창, 체결, 선물 문맥 데이터를 실시간 저장�
 | `4_triple_barrier_labeler.py` | 다음 봉 시가 기준 라벨 생성 |
 | `6_build_ml_dataset.py`, `7_train_direction_model.py` | 학습 데이터와 방향성 모델 생성 |
 | `8_model_signal_backtest.py` | 비용·중복 포지션·위험 규칙을 반영한 백테스트 |
+
+## 파일 경로
+
+[README.md](C:\\Users\\next9\\OneDrive\\바탕 화면\\coin_project\\github_submission\\README.md)
+전체 목표, 현재 구축 상태, 최종 계획을 먼저 봅니다.
+
+[mermaid_ai_architecture_code.md](C:\\Users\\next9\\OneDrive\\바탕 화면\\coin_project\\github_submission\\docs\\mermaid_ai_architecture_code.md)
+데이터가 수집부터 학습·모의투자까지 어떻게 흐르는지 그림으로 이해합니다.
+
+[1_chunk_downloader.py](C:\\Users\\next9\\OneDrive\\바탕 화면\\coin_project\\github_submission\\1_chunk_downloader.py) → [backfill_runner.py](C:\\Users\\next9\\OneDrive\\바탕 화면\\coin_project\\github_submission\\backfill_runner.py)
+과거 1분봉을 14일 청크로 수집하고 누락을 검사하는 부분입니다.
+
+[flink_batch_submitter.py](C:\\Users\\next9\\OneDrive\\바탕 화면\\coin_project\\github_submission\\flink_batch_submitter.py) → [batch_feature_job.py](C:\\Users\\next9\\OneDrive\\바탕 화면\\coin_project\\github_submission\\flink_jobs\\batch_feature_job.py)
+원천 데이터를 PyFlink로 가공해 피처 Parquet로 저장하는 핵심 부분입니다.
+
+[daily_collection_runner.py](C:\\Users\\next9\\OneDrive\\바탕 화면\\coin_project\\github_submission\\daily_collection_runner.py) → [btcusdt_daily_collection.py](C:\\Users\\next9\\OneDrive\\바탕 화면\\coin_project\\github_submission\\airflow\\dags\\btcusdt_daily_collection.py)
+매일 또는 PC를 켠 날 누락 데이터를 수집·가공하는 자동화 구조입니다.
+
+[4_triple_barrier_labeler.py](C:\\Users\\next9\\OneDrive\\바탕 화면\\coin_project\\github_submission\\4_triple_barrier_labeler.py) → [6_build_ml_dataset.py](C:\\Users\\next9\\OneDrive\\바탕 화면\\coin_project\\github_submission\\6_build_ml_dataset.py) → [7_train_direction_model.py](C:\\Users\\next9\\OneDrive\\바탕 화면\\coin_project\\github_submission\\7_train_direction_model.py)
+피처 데이터에 정답을 붙이고, 학습용 데이터셋을 만들고, 모델을 학습하는 흐름입니다.
+
+[8_model_signal_backtest.py](C:\\Users\\next9\\OneDrive\\바탕 화면\\coin_project\\github_submission\\8_model_signal_backtest.py) → [12_paper_trading_risk_engine.py](C:\\Users\\next9\\OneDrive\\바탕 화면\\coin_project\\github_submission\\12_paper_trading_risk_engine.py)
+모델 신호를 백테스트하고, 거래당 최대 손실 2% 위험 규칙을 적용하는 부분입니다.
+
+[9_futures_context_collector.py](C:\\Users\\next9\\OneDrive\\바탕 화면\\coin_project\\github_submission\\9_futures_context_collector.py) → [10_aggtrade_collector.py](C:\\Users\\next9\\OneDrive\\바탕 화면\\coin_project\\github_submission\\10_aggtrade_collector.py) → [11_realtime_market_capture.py](C:\\Users\\next9\\OneDrive\\바탕 화면\\coin_project\\github_submission\\11_realtime_market_capture.py)
+펀딩비·마크프라이스·체결·실시간 데이터로 확장하는 다음 단계입니다.
