@@ -145,17 +145,3 @@ WebSocket으로 호가창, 체결, 선물 문맥 데이터를 실시간 저장�
 | `4_triple_barrier_labeler.py` | 다음 봉 시가 기준 라벨 생성 |
 | `6_build_ml_dataset.py`, `7_train_direction_model.py` | 학습 데이터와 방향성 모델 생성 |
 | `8_model_signal_backtest.py` | 비용·중복 포지션·위험 규칙을 반영한 백테스트 |
-
-## GitHub 제출용 파일 만들기
-
-원천 데이터, Parquet, 모델, 예측 결과, 로그는 용량이 크고 재생성할 수 있으므로 GitHub 제출 대상에서 제외합니다. 아래 명령을 실행하면 코드·설정·핵심 보고서만 포함한 `github_submission` 폴더가 생성됩니다.
-
-```powershell
-PowerShell -ExecutionPolicy Bypass -File .\scripts\prepare_github_submission.ps1
-```
-
-생성된 `github_submission` 폴더의 내용만 새 GitHub 저장소에 올리면 됩니다. 원본 프로젝트의 데이터와 실행 결과는 삭제되지 않습니다.
-
-## 주의 사항
-
-이 프로젝트는 교육 및 연구 목적입니다. 공개 API만으로는 과거 5년치 호가창과 전체 체결 이력을 완전하게 복원할 수 없으며, 어떤 백테스트나 모델도 미래 수익을 보장하지 않습니다. 실제 거래 전에는 장기간 모의투자와 위험 검증이 필요합니다.
