@@ -138,36 +138,33 @@ WebSocket으로 호가창, 체결, 선물 문맥 데이터를 실시간 저장�
 
 | 경로 | 역할 |
 | --- | --- |
-| `1_chunk_downloader.py` | OHLCV 청크 수집과 시간 누락 검증 |
-| `backfill_runner.py` | 14일 단위 백필 실행 |
-| `flink_batch_submitter.py`, `flink_jobs/` | PyFlink 피처 가공과 검증 |
-| `dags/`, `daily_collection_runner.py` | Airflow 기반 일일 수집 준비 |
-| `4_triple_barrier_labeler.py` | 다음 봉 시가 기준 라벨 생성 |
-| `6_build_ml_dataset.py`, `7_train_direction_model.py` | 학습 데이터와 방향성 모델 생성 |
-| `8_model_signal_backtest.py` | 비용·중복 포지션·위험 규칙을 반영한 백테스트 |
+| `1_chunk_downloader.py` | Binance에서 BTCUSDT 1분봉을 청크 단위로 내려받고 시간 누락을 검사하는 수집기 |
+| `backfill_runner.py` | 여러 날짜를 14일 청크로 나누어 수집과 PyFlink 가공을 순서대로 실행하는 관리자 |
+| `flink_batch_submitter.py` | PyFlink 작업을 제출하고 결과 파일과 성공 마커를 검사하는 실행기 |
+| `flink_jobs/batch_feature_job.py` | 원천 1분봉에서 이동평균, 수익률 같은 피처를 만드는 실제 PyFlink 작업 |
+| `daily_collection_runner.py` | 하루 단위 수집·가공 흐름을 점검하거나 실행하는 도구 |
+| `airflow/dags/btcusdt_daily_collection.py` | Airflow가 정해진 일정 또는 누락 날짜에 일일 수집을 실행하도록 정의한 DAG |
+| `4_triple_barrier_labeler.py` | 다음 봉 시가 기준으로 미래 가격 움직임의 정답 라벨을 만드는 코드 |
+| `6_build_ml_dataset.py` | 피처와 라벨을 결합해 머신러닝 학습용 데이터셋을 만드는 코드 |
+| `7_train_direction_model.py` | 시간 순서 기반으로 방향성 예측 모델을 학습하는 코드 |
+| `8_model_signal_backtest.py` | 모델 신호에 비용, 중복 포지션 방지, 손실 제한을 적용해 연구용 백테스트를 하는 코드 |
+| `12_paper_trading_risk_engine.py` | 최대 손실 2% 등의 위험 규칙으로 모의 거래 결과를 점검하는 코드 |
+| `9_futures_context_collector.py` | 선물 OHLCV, 마크 프라이스, 펀딩비 같은 선물 문맥 데이터를 수집하는 코드 |
+| `10_aggtrade_collector.py` | 실제 체결 데이터(aggTrade)를 페이지 경계 누락 없이 수집하는 코드 |
+| `11_realtime_market_capture.py` | 앞으로 실시간 시장 데이터를 저장하기 위한 수집 코드 |
+| `2_flink_processor.py` | 과거 Pandas 기반 피처 처리 코드. 실제 PyFlink 핵심 경로는 위의 `flink_batch_submitter.py`와 `flink_jobs/batch_feature_job.py`입니다. |
+| `3_ml_training.py`, `5_r_multiple_backtest.py` | 초기 연구 단계에서 사용한 학습·백테스트 코드로, 현재는 v2 파이프라인 코드보다 우선순위가 낮습니다. |
 
-## 파일 경로
+## GitHub 제출용 파일 만들기
 
-[README.md](C:\\Users\\next9\\OneDrive\\바탕 화면\\coin_project\\github_submission\\README.md)
-전체 목표, 현재 구축 상태, 최종 계획을 먼저 봅니다.
+원천 데이터, Parquet, 모델, 예측 결과, 로그는 용량이 크고 재생성할 수 있으므로 GitHub 제출 대상에서 제외합니다. 아래 명령을 실행하면 코드·설정·핵심 보고서만 포함한 `github_submission` 폴더가 생성됩니다.
 
-[mermaid_ai_architecture_code.md](C:\\Users\\next9\\OneDrive\\바탕 화면\\coin_project\\github_submission\\docs\\mermaid_ai_architecture_code.md)
-데이터가 수집부터 학습·모의투자까지 어떻게 흐르는지 그림으로 이해합니다.
+```powershell
+PowerShell -ExecutionPolicy Bypass -File .\scripts\prepare_github_submission.ps1
+```
 
-[1_chunk_downloader.py](C:\\Users\\next9\\OneDrive\\바탕 화면\\coin_project\\github_submission\\1_chunk_downloader.py) → [backfill_runner.py](C:\\Users\\next9\\OneDrive\\바탕 화면\\coin_project\\github_submission\\backfill_runner.py)
-과거 1분봉을 14일 청크로 수집하고 누락을 검사하는 부분입니다.
+생성된 `github_submission` 폴더의 내용만 새 GitHub 저장소에 올리면 됩니다. 원본 프로젝트의 데이터와 실행 결과는 삭제되지 않습니다.
 
-[flink_batch_submitter.py](C:\\Users\\next9\\OneDrive\\바탕 화면\\coin_project\\github_submission\\flink_batch_submitter.py) → [batch_feature_job.py](C:\\Users\\next9\\OneDrive\\바탕 화면\\coin_project\\github_submission\\flink_jobs\\batch_feature_job.py)
-원천 데이터를 PyFlink로 가공해 피처 Parquet로 저장하는 핵심 부분입니다.
+## 주의 사항
 
-[daily_collection_runner.py](C:\\Users\\next9\\OneDrive\\바탕 화면\\coin_project\\github_submission\\daily_collection_runner.py) → [btcusdt_daily_collection.py](C:\\Users\\next9\\OneDrive\\바탕 화면\\coin_project\\github_submission\\airflow\\dags\\btcusdt_daily_collection.py)
-매일 또는 PC를 켠 날 누락 데이터를 수집·가공하는 자동화 구조입니다.
-
-[4_triple_barrier_labeler.py](C:\\Users\\next9\\OneDrive\\바탕 화면\\coin_project\\github_submission\\4_triple_barrier_labeler.py) → [6_build_ml_dataset.py](C:\\Users\\next9\\OneDrive\\바탕 화면\\coin_project\\github_submission\\6_build_ml_dataset.py) → [7_train_direction_model.py](C:\\Users\\next9\\OneDrive\\바탕 화면\\coin_project\\github_submission\\7_train_direction_model.py)
-피처 데이터에 정답을 붙이고, 학습용 데이터셋을 만들고, 모델을 학습하는 흐름입니다.
-
-[8_model_signal_backtest.py](C:\\Users\\next9\\OneDrive\\바탕 화면\\coin_project\\github_submission\\8_model_signal_backtest.py) → [12_paper_trading_risk_engine.py](C:\\Users\\next9\\OneDrive\\바탕 화면\\coin_project\\github_submission\\12_paper_trading_risk_engine.py)
-모델 신호를 백테스트하고, 거래당 최대 손실 2% 위험 규칙을 적용하는 부분입니다.
-
-[9_futures_context_collector.py](C:\\Users\\next9\\OneDrive\\바탕 화면\\coin_project\\github_submission\\9_futures_context_collector.py) → [10_aggtrade_collector.py](C:\\Users\\next9\\OneDrive\\바탕 화면\\coin_project\\github_submission\\10_aggtrade_collector.py) → [11_realtime_market_capture.py](C:\\Users\\next9\\OneDrive\\바탕 화면\\coin_project\\github_submission\\11_realtime_market_capture.py)
-펀딩비·마크프라이스·체결·실시간 데이터로 확장하는 다음 단계입니다.
+이 프로젝트는 교육 및 연구 목적입니다. 공개 API만으로는 과거 5년치 호가창과 전체 체결 이력을 완전하게 복원할 수 없으며, 어떤 백테스트나 모델도 미래 수익을 보장하지 않습니다. 실제 거래 전에는 장기간 모의투자와 위험 검증이 필요합니다.
