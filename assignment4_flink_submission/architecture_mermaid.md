@@ -1,8 +1,5 @@
 # Kafka·Flink 과제 아키텍처 코드
 
-아래 코드를 [Mermaid AI](https://mermaid.ai/)에 그대로 붙여 넣으면 과제 제출 범위의
-아키텍처 그림을 만들 수 있습니다. GitHub도 Mermaid 다이어그램을 렌더링합니다.
-
 ```mermaid
 flowchart LR
     classDef source fill:#E0F2FE,stroke:#0369A1,stroke-width:2px,color:#0C4A6E
