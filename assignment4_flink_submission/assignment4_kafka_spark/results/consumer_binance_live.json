@@ -1,0 +1,9 @@
+{
+  "status": "success",
+  "topic": "btc_market_events_v1",
+  "run_id": "binance-usdm-20260822-live",
+  "consumer_group_id": "binance-usdm-20260822-live-consumer-fd9d562c",
+  "consumer_received_count": 1000,
+  "expected_count": 1000,
+  "raw_jsonl_path": "assignment4_kafka_spark\\data\\consumed_binance_usdm_events.jsonl"
+}
