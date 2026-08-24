@@ -158,11 +158,6 @@ Flink 실행 환경은 `http://localhost:8081`, Airflow는 `http://localhost:808
 | 최종 저장 | 피처 1,000건을 Parquet로 저장 | `output/flink_feature_store_binance_usdm/`와 `_SUCCESS` 마커 |
 | 실제 구현과 이후 계획 | 현재 범위와 미구현 실시간 경로를 분리해 기록 | 이 문서의 `10. 구현 범위와 다음 단계` |
 
-멘토님께는 다음처럼 설명하면 됩니다.
-
-> 실제 자동매매 프로젝트의 처리 엔진은 Apache Flink입니다. Binance USDT-M BTCUSDT
-> 닫힌 1분봉 1,000건을 Kafka로 전송하고 Consumer 수신 건수를 확인한 뒤, 동일한
-> OHLCV 데이터를 Flink 배치 작업으로 전처리해 Parquet Feature Store에 저장했습니다.
 
 ## 10. 저장 위치와 GitHub 제출
 
