@@ -1,0 +1,13 @@
+{
+  "status": "success",
+  "topic": "assignment5.market.events.v1",
+  "run_id": "assignment5-load_10000-20260830T045712Z",
+  "consumer_group_id": "assignment5-load_10000-20260830T045712Z-consumer-1d5b89eb",
+  "consumer_received_count": 10000,
+  "consumer_matching_message_count": 10500,
+  "duplicate_message_count": 500,
+  "expected_count": 10000,
+  "raw_jsonl_path": "C:\\Users\\next9\\OneDrive\\바탕 화면\\coin_project\\assignment5_pipeline_resilience\\data\\load_10000_consumed.jsonl",
+  "elapsed_seconds": 4.031,
+  "unique_records_per_second": 2480.774
+}

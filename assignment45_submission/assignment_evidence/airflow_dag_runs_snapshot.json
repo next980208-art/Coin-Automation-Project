@@ -1,0 +1,314 @@
+﻿[
+    {
+        "dag_id":  "btcusdt_usdm_historical_backfill",
+        "run_id":  "fill_missing_20260822_20260825",
+        "state":  "success",
+        "execution_date":  "2026-08-27T16:31:38+00:00",
+        "start_date":  "2026-08-27T16:31:53.891684+00:00",
+        "end_date":  "2026-08-27T16:32:43.208552+00:00"
+    },
+    {
+        "dag_id":  "btcusdt_usdm_historical_backfill",
+        "run_id":  "manual__2026-08-27T15:35:15+00:00",
+        "state":  "success",
+        "execution_date":  "2026-08-27T15:35:15+00:00",
+        "start_date":  "2026-08-27T15:35:15+00:00",
+        "end_date":  "2026-08-27T15:33:59.934947+00:00"
+    },
+    {
+        "dag_id":  "btcusdt_usdm_historical_backfill",
+        "run_id":  "manual__2026-08-27T15:30:27+00:00",
+        "state":  "success",
+        "execution_date":  "2026-08-27T15:30:27+00:00",
+        "start_date":  "2026-08-27T15:30:27+00:00",
+        "end_date":  "2026-08-27T15:31:15.132486+00:00"
+    },
+    {
+        "dag_id":  "btcusdt_usdm_historical_backfill",
+        "run_id":  "manual__2026-08-27T15:25:35+00:00",
+        "state":  "success",
+        "execution_date":  "2026-08-27T15:25:35+00:00",
+        "start_date":  "2026-08-27T15:25:35+00:00",
+        "end_date":  "2026-08-27T15:27:26.594279+00:00"
+    },
+    {
+        "dag_id":  "btcusdt_usdm_historical_backfill",
+        "run_id":  "manual__2026-08-27T15:20:40+00:00",
+        "state":  "success",
+        "execution_date":  "2026-08-27T15:20:40+00:00",
+        "start_date":  "2026-08-27T15:20:40+00:00",
+        "end_date":  "2026-08-27T15:23:35.181199+00:00"
+    },
+    {
+        "dag_id":  "btcusdt_usdm_historical_backfill",
+        "run_id":  "scheduled__2026-08-27T15:00:00+00:00",
+        "state":  "success",
+        "execution_date":  "2026-08-27T15:00:00+00:00",
+        "start_date":  "2026-08-27T16:33:05.149521+00:00",
+        "end_date":  "2026-08-27T16:33:33.980975+00:00"
+    },
+    {
+        "dag_id":  "btcusdt_usdm_historical_backfill",
+        "run_id":  "manual__2026-08-26T15:07:38+00:00",
+        "state":  "success",
+        "execution_date":  "2026-08-26T15:07:38+00:00",
+        "start_date":  "2026-08-26T15:07:38+00:00",
+        "end_date":  "2026-08-27T16:31:53.050328+00:00"
+    },
+    {
+        "dag_id":  "btcusdt_usdm_historical_backfill",
+        "run_id":  "manual__2026-08-26T15:02:47+00:00",
+        "state":  "success",
+        "execution_date":  "2026-08-26T15:02:47+00:00",
+        "start_date":  "2026-08-26T15:02:47+00:00",
+        "end_date":  "2026-08-26T15:00:37.402855+00:00"
+    },
+    {
+        "dag_id":  "btcusdt_usdm_historical_backfill",
+        "run_id":  "manual__2026-08-26T14:58:03+00:00",
+        "state":  "success",
+        "execution_date":  "2026-08-26T14:58:03+00:00",
+        "start_date":  "2026-08-26T14:58:03+00:00",
+        "end_date":  "2026-08-26T14:56:47.151130+00:00"
+    },
+    {
+        "dag_id":  "btcusdt_usdm_historical_backfill",
+        "run_id":  "manual__2026-08-26T14:53:32+00:00",
+        "state":  "success",
+        "execution_date":  "2026-08-26T14:53:32+00:00",
+        "start_date":  "2026-08-26T14:53:32+00:00",
+        "end_date":  "2026-08-26T14:53:03.305340+00:00"
+    },
+    {
+        "dag_id":  "btcusdt_usdm_historical_backfill",
+        "run_id":  "manual__2026-08-26T14:48:55+00:00",
+        "state":  "success",
+        "execution_date":  "2026-08-26T14:48:55+00:00",
+        "start_date":  "2026-08-26T14:48:55+00:00",
+        "end_date":  "2026-08-26T14:49:31.444782+00:00"
+    },
+    {
+        "dag_id":  "btcusdt_usdm_historical_backfill",
+        "run_id":  "manual__2026-08-26T14:44:22+00:00",
+        "state":  "success",
+        "execution_date":  "2026-08-26T14:44:22+00:00",
+        "start_date":  "2026-08-26T14:44:22+00:00",
+        "end_date":  "2026-08-26T14:45:54.403858+00:00"
+    },
+    {
+        "dag_id":  "btcusdt_usdm_historical_backfill",
+        "run_id":  "manual__2026-08-26T14:42:25+00:00",
+        "state":  "success",
+        "execution_date":  "2026-08-26T14:42:25+00:00",
+        "start_date":  "2026-08-26T14:42:25+00:00",
+        "end_date":  "2026-08-26T14:42:21.727524+00:00"
+    },
+    {
+        "dag_id":  "btcusdt_usdm_historical_backfill",
+        "run_id":  "manual__2026-08-26T14:40:08+00:00",
+        "state":  "success",
+        "execution_date":  "2026-08-26T14:40:08+00:00",
+        "start_date":  "2026-08-26T14:40:08+00:00",
+        "end_date":  "2026-08-26T14:42:03.588248+00:00"
+    },
+    {
+        "dag_id":  "btcusdt_usdm_historical_backfill",
+        "run_id":  "manual__2026-08-26T14:33:00+00:00",
+        "state":  "failed",
+        "execution_date":  "2026-08-26T14:33:00+00:00",
+        "start_date":  "2026-08-26T14:33:00+00:00",
+        "end_date":  "2026-08-26T14:30:48.545473+00:00"
+    },
+    {
+        "dag_id":  "btcusdt_usdm_historical_backfill",
+        "run_id":  "manual__2026-08-26T14:31:22+00:00",
+        "state":  "success",
+        "execution_date":  "2026-08-26T14:31:22+00:00",
+        "start_date":  "2026-08-26T14:31:22+00:00",
+        "end_date":  "2026-08-26T14:30:00.284065+00:00"
+    },
+    {
+        "dag_id":  "btcusdt_usdm_historical_backfill",
+        "run_id":  "manual__2026-08-26T14:30:00+00:00",
+        "state":  "success",
+        "execution_date":  "2026-08-26T14:30:00+00:00",
+        "start_date":  "2026-08-26T14:30:00+00:00",
+        "end_date":  "2026-08-26T14:24:01.559422+00:00"
+    },
+    {
+        "dag_id":  "btcusdt_usdm_historical_backfill",
+        "run_id":  "manual__2026-08-26T14:29:27+00:00",
+        "state":  "success",
+        "execution_date":  "2026-08-26T14:29:27+00:00",
+        "start_date":  "2026-08-26T14:29:27+00:00",
+        "end_date":  "2026-08-26T14:29:22.020690+00:00"
+    },
+    {
+        "dag_id":  "btcusdt_usdm_historical_backfill",
+        "run_id":  "manual__2026-08-26T14:25:00+00:00",
+        "state":  "failed",
+        "execution_date":  "2026-08-26T14:25:00+00:00",
+        "start_date":  "2026-08-26T14:25:00+00:00",
+        "end_date":  "2026-08-26T14:22:17.047468+00:00"
+    },
+    {
+        "dag_id":  "btcusdt_usdm_historical_backfill",
+        "run_id":  "manual__2026-08-26T14:00:00+00:00",
+        "state":  "success",
+        "execution_date":  "2026-08-26T14:00:00+00:00",
+        "start_date":  "2026-08-26T14:00:00+00:00",
+        "end_date":  "2026-08-26T13:53:30.837859+00:00"
+    },
+    {
+        "dag_id":  "btcusdt_usdm_historical_backfill",
+        "run_id":  "manual__2026-08-26T13:47:08+00:00",
+        "state":  "success",
+        "execution_date":  "2026-08-26T13:47:08+00:00",
+        "start_date":  "2026-08-26T14:01:26.190705+00:00",
+        "end_date":  "2026-08-26T14:01:45.514453+00:00"
+    },
+    {
+        "dag_id":  "btcusdt_usdm_historical_backfill",
+        "run_id":  "scheduled__2026-08-26T13:00:00+00:00",
+        "state":  "failed",
+        "execution_date":  "2026-08-26T13:00:00+00:00",
+        "start_date":  "2026-08-26T14:01:56.868169+00:00",
+        "end_date":  "2026-08-26T14:02:35.011500+00:00"
+    },
+    {
+        "dag_id":  "btcusdt_usdm_historical_backfill",
+        "run_id":  "scheduled__2026-08-26T12:00:00+00:00",
+        "state":  "failed",
+        "execution_date":  "2026-08-26T12:00:00+00:00",
+        "start_date":  "2026-08-26T13:43:38.257298+00:00",
+        "end_date":  "2026-08-26T14:01:24.919802+00:00"
+    },
+    {
+        "dag_id":  "btcusdt_usdm_historical_backfill",
+        "run_id":  "manual__2026-08-25T13:22:15+00:00",
+        "state":  "success",
+        "execution_date":  "2026-08-25T13:22:15+00:00",
+        "start_date":  "2026-08-25T13:22:16.556563+00:00",
+        "end_date":  "2026-08-25T13:23:02.003598+00:00"
+    },
+    {
+        "dag_id":  "btcusdt_usdm_historical_backfill",
+        "run_id":  "scheduled__2026-08-25T13:00:00+00:00",
+        "state":  "success",
+        "execution_date":  "2026-08-25T13:00:00+00:00",
+        "start_date":  "2026-08-25T14:00:01.094359+00:00",
+        "end_date":  "2026-08-25T14:00:46.194435+00:00"
+    },
+    {
+        "dag_id":  "btcusdt_usdm_historical_backfill",
+        "run_id":  "scheduled__2026-08-25T12:00:00+00:00",
+        "state":  "success",
+        "execution_date":  "2026-08-25T12:00:00+00:00",
+        "start_date":  "2026-08-25T13:00:01.894902+00:00",
+        "end_date":  "2026-08-25T13:01:36.244454+00:00"
+    },
+    {
+        "dag_id":  "btcusdt_usdm_historical_backfill",
+        "run_id":  "scheduled__2026-08-25T11:00:00+00:00",
+        "state":  "success",
+        "execution_date":  "2026-08-25T11:00:00+00:00",
+        "start_date":  "2026-08-25T12:00:01.253560+00:00",
+        "end_date":  "2026-08-25T12:01:28.303233+00:00"
+    },
+    {
+        "dag_id":  "btcusdt_usdm_historical_backfill",
+        "run_id":  "scheduled__2026-08-25T10:00:00+00:00",
+        "state":  "success",
+        "execution_date":  "2026-08-25T10:00:00+00:00",
+        "start_date":  "2026-08-25T11:00:01.153312+00:00",
+        "end_date":  "2026-08-25T11:01:26.300781+00:00"
+    },
+    {
+        "dag_id":  "btcusdt_usdm_historical_backfill",
+        "run_id":  "scheduled__2026-08-25T09:00:00+00:00",
+        "state":  "success",
+        "execution_date":  "2026-08-25T09:00:00+00:00",
+        "start_date":  "2026-08-25T10:00:01.173956+00:00",
+        "end_date":  "2026-08-25T10:01:24.565420+00:00"
+    },
+    {
+        "dag_id":  "btcusdt_usdm_historical_backfill",
+        "run_id":  "scheduled__2026-08-25T08:00:00+00:00",
+        "state":  "success",
+        "execution_date":  "2026-08-25T08:00:00+00:00",
+        "start_date":  "2026-08-25T09:00:01.922070+00:00",
+        "end_date":  "2026-08-25T09:01:21.281674+00:00"
+    },
+    {
+        "dag_id":  "btcusdt_usdm_historical_backfill",
+        "run_id":  "manual__2026-08-25T07:03:20+00:00",
+        "state":  "success",
+        "execution_date":  "2026-08-25T07:03:20+00:00",
+        "start_date":  "2026-08-25T07:03:21.127261+00:00",
+        "end_date":  "2026-08-25T07:04:45.505957+00:00"
+    },
+    {
+        "dag_id":  "btcusdt_usdm_historical_backfill",
+        "run_id":  "scheduled__2026-08-25T07:00:00+00:00",
+        "state":  "success",
+        "execution_date":  "2026-08-25T07:00:00+00:00",
+        "start_date":  "2026-08-25T08:00:01.969970+00:00",
+        "end_date":  "2026-08-25T08:01:26.063935+00:00"
+    },
+    {
+        "dag_id":  "btcusdt_usdm_historical_backfill",
+        "run_id":  "manual__2026-08-25T06:51:13+00:00",
+        "state":  "success",
+        "execution_date":  "2026-08-25T06:51:13+00:00",
+        "start_date":  "2026-08-25T06:51:14.950328+00:00",
+        "end_date":  "2026-08-25T06:51:55.353419+00:00"
+    },
+    {
+        "dag_id":  "btcusdt_usdm_historical_backfill",
+        "run_id":  "manual__2026-08-25T06:46:03+00:00",
+        "state":  "failed",
+        "execution_date":  "2026-08-25T06:46:03+00:00",
+        "start_date":  "2026-08-25T06:46:04.315224+00:00",
+        "end_date":  "2026-08-25T06:46:19.443891+00:00"
+    },
+    {
+        "dag_id":  "btcusdt_usdm_historical_backfill",
+        "run_id":  "manual__2026-08-25T06:41:42+00:00",
+        "state":  "success",
+        "execution_date":  "2026-08-25T06:41:42+00:00",
+        "start_date":  "2026-08-25T06:41:43.040784+00:00",
+        "end_date":  "2026-08-25T06:42:57.559946+00:00"
+    },
+    {
+        "dag_id":  "btcusdt_usdm_historical_backfill",
+        "run_id":  "manual__2026-08-25T06:31:07+00:00",
+        "state":  "success",
+        "execution_date":  "2026-08-25T06:31:07+00:00",
+        "start_date":  "2026-08-25T06:31:08.531129+00:00",
+        "end_date":  "2026-08-25T06:31:32.470540+00:00"
+    },
+    {
+        "dag_id":  "btcusdt_usdm_historical_backfill",
+        "run_id":  "manual__2026-08-25T06:28:35+00:00",
+        "state":  "failed",
+        "execution_date":  "2026-08-25T06:28:35+00:00",
+        "start_date":  "2026-08-25T06:28:36.349001+00:00",
+        "end_date":  "2026-08-25T06:28:44.901879+00:00"
+    },
+    {
+        "dag_id":  "btcusdt_usdm_historical_backfill",
+        "run_id":  "scheduled__2026-08-25T06:00:00+00:00",
+        "state":  "success",
+        "execution_date":  "2026-08-25T06:00:00+00:00",
+        "start_date":  "2026-08-25T07:00:01.087640+00:00",
+        "end_date":  "2026-08-25T07:01:24.667912+00:00"
+    },
+    {
+        "dag_id":  "btcusdt_usdm_historical_backfill",
+        "run_id":  "scheduled__2026-08-25T05:00:00+00:00",
+        "state":  "failed",
+        "execution_date":  "2026-08-25T05:00:00+00:00",
+        "start_date":  "2026-08-25T06:37:09.915269+00:00",
+        "end_date":  "2026-08-25T06:38:25.091187+00:00"
+    }
+]
