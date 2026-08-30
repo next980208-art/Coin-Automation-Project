@@ -1,0 +1,19 @@
+{
+  "status": "success",
+  "topic": "assignment5.market.events.v1",
+  "run_id": "assignment5-baseline_1000-20260830T045712Z",
+  "producer_sent_count": 1000,
+  "producer_unique_event_count": 1000,
+  "intentional_duplicate_count": 0,
+  "fetched_event_count": 1000,
+  "event_schema_version": "market_event_v1",
+  "source": "local-replay",
+  "symbol": "BTCUSDT",
+  "market": "USDT-M",
+  "timeframe": "1m",
+  "event_time_start_utc": "2026-08-21T22:02:00Z",
+  "event_time_end_utc": "2026-08-22T14:41:00Z",
+  "send_elapsed_seconds": 0.266,
+  "send_records_per_second": 3759.398,
+  "total_elapsed_seconds": 0.281
+}

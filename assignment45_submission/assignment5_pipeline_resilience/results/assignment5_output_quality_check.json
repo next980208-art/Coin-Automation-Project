@@ -1,0 +1,36 @@
+{
+  "checked_at_utc": "2026-08-30T05:05:05.877870+00:00",
+  "experiment_report": "assignment5_pipeline_resilience\\results\\assignment5_final_report.json",
+  "scenarios": {
+    "baseline_1000": {
+      "files": [
+        "assignment5_pipeline_resilience\\output\\baseline_1000\\market=usdm\\symbol=BTCUSDT\\timeframe=1m\\year=2026\\month=08\\features_assignment5-baseline_1000-20260830T045712Z_202608.parquet"
+      ],
+      "parquet_bytes": 79004,
+      "expected_rows": 1000,
+      "parquet_rows": 1000,
+      "unique_timestamps": 1000,
+      "duplicate_timestamps": 0,
+      "missing_required_columns": [],
+      "missing_required_values": 0,
+      "errors": [],
+      "healthy": true
+    },
+    "load_10000": {
+      "files": [
+        "assignment5_pipeline_resilience\\output\\load_10000\\market=usdm\\symbol=BTCUSDT\\timeframe=1m\\year=2026\\month=08\\features_assignment5-load_10000-20260830T045712Z_202608.parquet"
+      ],
+      "parquet_bytes": 302902,
+      "expected_rows": 10000,
+      "parquet_rows": 10000,
+      "unique_timestamps": 10000,
+      "duplicate_timestamps": 0,
+      "missing_required_columns": [],
+      "missing_required_values": 0,
+      "errors": [],
+      "healthy": true
+    }
+  },
+  "errors": [],
+  "healthy": true
+}
