@@ -1,0 +1,16 @@
+﻿COMMAND
+docker compose exec -T -w /opt/airflow/project airflow python flink_batch_submitter.py --raw-file /opt/airflow/project/assignment5_pipeline_resilience/data/load_10000_flink_input.csv --feature-folder /opt/airflow/project/assignment5_pipeline_resilience/output/load_10000 --keep-raw --reset-stale-staging
+
+STDOUT
+Flink batch completed: job_id=08e3fad0007754619f5878d65e91b3e3, rows=10000
+Boundary context: unavailable
+Feature files: ['/opt/airflow/project/assignment5_pipeline_resilience/output/load_10000/market=usdm/symbol=BTCUSDT/timeframe=1m/year=2026/month=08/features_assignment5-load_10000-20260831T014703Z_202608.parquet']
+Success marker: /opt/airflow/project/assignment5_pipeline_resilience/output/load_10000/_markers/_SUCCESS_assignment5-load_10000-20260831T014703Z.json
+
+
+STDERR
+
+
+ELAPSED_SECONDS
+8.266000
+

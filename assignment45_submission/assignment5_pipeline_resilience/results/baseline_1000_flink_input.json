@@ -1,0 +1,21 @@
+﻿{
+  "status": "success",
+  "raw_jsonl_count": 1000,
+  "valid_flink_input_count": 1000,
+  "invalid_ohlcv_count": 0,
+  "duplicate_event_id_count": 0,
+  "run_id": "assignment5-baseline_1000-20260831T014703Z",
+  "output_csv_path": "<PROJECT_ROOT>\\assignment5_pipeline_resilience\\data\\baseline_1000_flink_input.csv",
+  "flink_input_columns": [
+    "timestamp",
+    "open",
+    "high",
+    "low",
+    "close",
+    "volume",
+    "run_id",
+    "symbol",
+    "market",
+    "timeframe"
+  ]
+}

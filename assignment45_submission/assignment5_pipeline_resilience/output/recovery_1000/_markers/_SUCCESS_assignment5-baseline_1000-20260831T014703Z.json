@@ -1,0 +1,31 @@
+﻿{
+  "run_id": "assignment5-baseline_1000-20260831T014703Z",
+  "processor": "apache_flink_pyflink_batch",
+  "feature_schema_version": "ohlcv_basic_v2_boundary4",
+  "metadata_schema_version": "market_metadata_v1",
+  "timestamp_field": "event_time_ms",
+  "timestamp_unit": "milliseconds",
+  "job_id": "10a25bbb76ecde40b0b1106aabd34e4a",
+  "rows": 1000,
+  "boundary_context_rows": 0,
+  "boundary_context_status": "unavailable",
+  "feature_files": [
+    "/opt/airflow/project/assignment5_pipeline_resilience/output/recovery_1000/market=usdm/symbol=BTCUSDT/timeframe=1m/year=2026/month=08/features_assignment5-baseline_1000-20260831T014703Z_202608.parquet"
+  ],
+  "raw_file": "/opt/airflow/project/assignment5_pipeline_resilience/data/recovery_1000_flink_input.csv",
+  "flink_command": [
+    "/opt/flink/bin/flink",
+    "run",
+    "--detached",
+    "--jobmanager",
+    "jobmanager:8081",
+    "--python",
+    "/opt/airflow/project/flink_jobs/batch_feature_job.py",
+    "--",
+    "--raw-file",
+    "/opt/flink/staging/assignment5-baseline_1000-20260831T014703Z/input_with_boundary_context.csv",
+    "--output-dir",
+    "/opt/flink/staging/assignment5-baseline_1000-20260831T014703Z/output"
+  ],
+  "saved_at_utc": "2026-08-31T01:47:36.310479+00:00"
+}

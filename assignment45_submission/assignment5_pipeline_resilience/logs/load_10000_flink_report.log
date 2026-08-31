@@ -1,0 +1,13 @@
+﻿COMMAND
+<USER_HOME>\AppData\Local\Programs\Python\Python311\python.exe "<PROJECT_ROOT>\assignment4_kafka_spark\write_flink_report.py" --input-report "<PROJECT_ROOT>\assignment5_pipeline_resilience\results\load_10000_flink_input.json" --marker-path "<PROJECT_ROOT>\assignment5_pipeline_resilience\output\load_10000\_markers\_SUCCESS_assignment5-load_10000-20260831T014703Z.json" --project-root "<PROJECT_ROOT>" --report-path "<PROJECT_ROOT>\assignment5_pipeline_resilience\results\load_10000_flink.json"
+
+STDOUT
+{"status": "success", "processor": "apache_flink_pyflink_batch", "flink_job_id": "08e3fad0007754619f5878d65e91b3e3", "run_id": "assignment5-load_10000-20260831T014703Z", "flink_input_raw_count": 10000, "flink_input_valid_count": 10000, "flink_output_processed_count": 10000, "dropped_count_before_flink": 0, "storage_format": "parquet", "feature_schema_version": "ohlcv_basic_v2_boundary4", "feature_files": ["assignment5_pipeline_resilience\\output\\load_10000\\market=usdm\\symbol=BTCUSDT\\timeframe=1m\\year=2026\\month=08\\features_assignment5-load_10000-20260831T014703Z_202608.parquet"], "final_columns": ["timestamp", "datetime_utc", "symbol", "market", "timeframe", "run_id", "open", "high", "low", "close", "volume", "ma_5", "return_1m", "feature_schema_version", "event_time_ms", "timestamp_unit", "metadata_schema_version"], "flink_features": ["ma_5", "return_1m"]}
+
+
+STDERR
+
+
+ELAPSED_SECONDS
+0.703000
+

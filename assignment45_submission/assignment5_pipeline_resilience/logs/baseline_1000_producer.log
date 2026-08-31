@@ -1,0 +1,13 @@
+﻿COMMAND
+<USER_HOME>\AppData\Local\Programs\Python\Python311\python.exe "<PROJECT_ROOT>\assignment4_kafka_spark\kafka_market_event_producer.py" --bootstrap-servers localhost:9092 --topic assignment5.market.events.v1 --source local-replay --source-file "<PROJECT_ROOT>\assignment4_kafka_spark\data\consumed_binance_usdm_events.jsonl" --count 1000 --duplicate-count 0 --run-id assignment5-baseline_1000-20260831T014703Z --report-path "<PROJECT_ROOT>\assignment5_pipeline_resilience\results\baseline_1000_producer.json"
+
+STDOUT
+{"status": "success", "topic": "assignment5.market.events.v1", "run_id": "assignment5-baseline_1000-20260831T014703Z", "producer_sent_count": 1000, "producer_unique_event_count": 1000, "intentional_duplicate_count": 0, "fetched_event_count": 1000, "event_schema_version": "market_event_v1", "source": "local-replay", "symbol": "BTCUSDT", "market": "USDT-M", "timeframe": "1m", "event_time_start_utc": "2026-08-21T22:02:00Z", "event_time_end_utc": "2026-08-22T14:41:00Z", "send_elapsed_seconds": 0.266, "send_records_per_second": 3759.398, "total_elapsed_seconds": 0.266}
+
+
+STDERR
+
+
+ELAPSED_SECONDS
+1.062000
+
