@@ -7,7 +7,6 @@
 
 1. `AIRFLOW_ACTUAL_UI_TRIGGER_EXECUTION_2026-08-31.md`: 4주차 Airflow 실행 과정과 결과
 2. `ASSIGNMENT5_ACTUAL_EXECUTION_AND_UI_EVIDENCE_2026-08-31.md`: 5주차 실험 과정과 결과
-3. `PRESENTATION_SCRIPT_ASSIGNMENT45.md`: 발표할 때 참고할 대본
 
 코드는 다음 위치에서 확인할 수 있습니다.
 
