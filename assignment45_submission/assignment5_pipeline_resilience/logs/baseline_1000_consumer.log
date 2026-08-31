@@ -1,0 +1,8 @@
+COMMAND
+C:\Users\next9\AppData\Local\Programs\Python\Python311\python.exe "C:\Users\next9\OneDrive\바탕 화면\coin_project\assignment4_kafka_spark\kafka_market_event_consumer.py" --bootstrap-servers localhost:9092 --topic assignment5.market.events.v1 --run-id assignment5-baseline_1000-20260830T045712Z --expected-count 1000 --timeout-seconds 180 --output-path "C:\Users\next9\OneDrive\바탕 화면\coin_project\assignment5_pipeline_resilience\data\baseline_1000_consumed.jsonl" --report-path "C:\Users\next9\OneDrive\바탕 화면\coin_project\assignment5_pipeline_resilience\results\baseline_1000_consumer.json"
+
+STDOUT
+{"status": "success", "topic": "assignment5.market.events.v1", "run_id": "assignment5-baseline_1000-20260830T045712Z", "consumer_group_id": "assignment5-baseline_1000-20260830T045712Z-consumer-14f831bf", "consumer_received_count": 1000, "consumer_matching_message_count": 1000, "duplicate_message_count": 0, "expected_count": 1000, "raw_jsonl_path": "C:\\Users\\next9\\OneDrive\\���� ȭ��\\coin_project\\assignment5_pipeline_resilience\\data\\baseline_1000_consumed.jsonl", "elapsed_seconds": 2.734, "unique_records_per_second": 365.764}
+
+
+STDERR
