@@ -1,8 +1,0 @@
-ccxt
-pandas
-kafka-python
-apache-flink==2.2.0
-xgboost
-scikit-learn
-pyarrow
-websockets
