@@ -1,0 +1,39 @@
+﻿{
+  "status": "success",
+  "processor": "apache_flink_pyflink_batch",
+  "flink_job_id": "6a0f8949d2108b0117ebd55378600701",
+  "run_id": "assignment5-baseline_1000-20260831T014703Z",
+  "flink_input_raw_count": 1000,
+  "flink_input_valid_count": 1000,
+  "flink_output_processed_count": 1000,
+  "dropped_count_before_flink": 0,
+  "storage_format": "parquet",
+  "feature_schema_version": "ohlcv_basic_v2_boundary4",
+  "feature_files": [
+    "assignment5_pipeline_resilience\\output\\baseline_1000\\market=usdm\\symbol=BTCUSDT\\timeframe=1m\\year=2026\\month=08\\features_assignment5-baseline_1000-20260831T014703Z_202608.parquet"
+  ],
+  "final_columns": [
+    "timestamp",
+    "datetime_utc",
+    "symbol",
+    "market",
+    "timeframe",
+    "run_id",
+    "open",
+    "high",
+    "low",
+    "close",
+    "volume",
+    "ma_5",
+    "return_1m",
+    "feature_schema_version",
+    "event_time_ms",
+    "timestamp_unit",
+    "metadata_schema_version"
+  ],
+  "flink_features": [
+    "ma_5",
+    "return_1m"
+  ],
+  "flink_elapsed_seconds": 7.953
+}
