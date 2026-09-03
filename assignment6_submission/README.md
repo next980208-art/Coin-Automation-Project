@@ -289,8 +289,3 @@ python assignment5_pipeline_resilience/run_experiment.py
 | 현재 실행 방법과 확인 결과 README | README 9절 | 완료 |
 | BI·API·inference 선택 항목 | 새로 추가하지 않아 제출 대상 아님을 10절에 명시 | 해당 없음 |
 
-## 12. GitHub 제출 범위
-
-GitHub에는 `assignment6_submission` 폴더 전체를 올리면 됩니다. 이 폴더에는 작은 실제 이벤트
-샘플, 코드, JSON, 로그, 화면 캡처와 총 0.5MB 미만의 최종 Parquet 결과 샘플만 포함했습니다.
-API key, 개인정보, 계정 정보, 5년 대용량 원천 데이터와 실제 주문 기능은 포함하지 않았습니다.
