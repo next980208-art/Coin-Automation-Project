@@ -1,0 +1,13 @@
+﻿{
+  "status": "success",
+  "topic": "assignment5.market.events.v1",
+  "run_id": "assignment5-baseline_1000-20260831T014703Z",
+  "consumer_group_id": "assignment5-baseline_1000-20260831T014703Z-consumer-c4695940",
+  "consumer_received_count": 1000,
+  "consumer_matching_message_count": 1000,
+  "duplicate_message_count": 0,
+  "expected_count": 1000,
+  "raw_jsonl_path": "<PROJECT_ROOT>\\assignment5_pipeline_resilience\\data\\baseline_1000_consumed.jsonl",
+  "elapsed_seconds": 2.687,
+  "unique_records_per_second": 372.162
+}

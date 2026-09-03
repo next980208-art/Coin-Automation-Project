@@ -1,0 +1,261 @@
+﻿{
+  "assignment": "5차시 데이터 파이프라인 부하·장애·복구 실험",
+  "executed_at_utc": "2026-08-31T01:47:37.115752+00:00",
+  "data_source": {
+    "type": "local replay derived from saved real Binance USDT-M BTCUSDT OHLCV",
+    "source_file": "assignment4_kafka_spark\\data\\consumed_binance_usdm_events.jsonl",
+    "external_load_sent": false
+  },
+  "pipeline": "local JSONL -> Kafka -> consumer JSONL -> PyFlink Batch -> Parquet",
+  "scenarios": [
+    {
+      "name": "baseline_1000",
+      "run_id": "assignment5-baseline_1000-20260831T014703Z",
+      "expected_unique_count": 1000,
+      "intentional_duplicate_count": 0,
+      "kafka_end_to_end_seconds": 3.094,
+      "producer": {
+        "status": "success",
+        "topic": "assignment5.market.events.v1",
+        "run_id": "assignment5-baseline_1000-20260831T014703Z",
+        "producer_sent_count": 1000,
+        "producer_unique_event_count": 1000,
+        "intentional_duplicate_count": 0,
+        "fetched_event_count": 1000,
+        "event_schema_version": "market_event_v1",
+        "source": "local-replay",
+        "symbol": "BTCUSDT",
+        "market": "USDT-M",
+        "timeframe": "1m",
+        "event_time_start_utc": "2026-08-21T22:02:00Z",
+        "event_time_end_utc": "2026-08-22T14:41:00Z",
+        "send_elapsed_seconds": 0.266,
+        "send_records_per_second": 3759.398,
+        "total_elapsed_seconds": 0.266
+      },
+      "consumer": {
+        "status": "success",
+        "topic": "assignment5.market.events.v1",
+        "run_id": "assignment5-baseline_1000-20260831T014703Z",
+        "consumer_group_id": "assignment5-baseline_1000-20260831T014703Z-consumer-c4695940",
+        "consumer_received_count": 1000,
+        "consumer_matching_message_count": 1000,
+        "duplicate_message_count": 0,
+        "expected_count": 1000,
+        "raw_jsonl_path": "<PROJECT_ROOT>\\assignment5_pipeline_resilience\\data\\baseline_1000_consumed.jsonl",
+        "elapsed_seconds": 2.687,
+        "unique_records_per_second": 372.162
+      },
+      "consumed_path": "assignment5_pipeline_resilience\\data\\baseline_1000_consumed.jsonl",
+      "prepare_elapsed_seconds": 0.094,
+      "flink": {
+        "status": "success",
+        "processor": "apache_flink_pyflink_batch",
+        "flink_job_id": "6a0f8949d2108b0117ebd55378600701",
+        "run_id": "assignment5-baseline_1000-20260831T014703Z",
+        "flink_input_raw_count": 1000,
+        "flink_input_valid_count": 1000,
+        "flink_output_processed_count": 1000,
+        "dropped_count_before_flink": 0,
+        "storage_format": "parquet",
+        "feature_schema_version": "ohlcv_basic_v2_boundary4",
+        "feature_files": [
+          "assignment5_pipeline_resilience\\output\\baseline_1000\\market=usdm\\symbol=BTCUSDT\\timeframe=1m\\year=2026\\month=08\\features_assignment5-baseline_1000-20260831T014703Z_202608.parquet"
+        ],
+        "final_columns": [
+          "timestamp",
+          "datetime_utc",
+          "symbol",
+          "market",
+          "timeframe",
+          "run_id",
+          "open",
+          "high",
+          "low",
+          "close",
+          "volume",
+          "ma_5",
+          "return_1m",
+          "feature_schema_version",
+          "event_time_ms",
+          "timestamp_unit",
+          "metadata_schema_version"
+        ],
+        "flink_features": [
+          "ma_5",
+          "return_1m"
+        ],
+        "flink_elapsed_seconds": 7.953
+      },
+      "total_pipeline_seconds": 11.141
+    },
+    {
+      "name": "load_10000",
+      "run_id": "assignment5-load_10000-20260831T014703Z",
+      "expected_unique_count": 10000,
+      "intentional_duplicate_count": 500,
+      "kafka_end_to_end_seconds": 4.422,
+      "producer": {
+        "status": "success",
+        "topic": "assignment5.market.events.v1",
+        "run_id": "assignment5-load_10000-20260831T014703Z",
+        "producer_sent_count": 10500,
+        "producer_unique_event_count": 10000,
+        "intentional_duplicate_count": 500,
+        "fetched_event_count": 10000,
+        "event_schema_version": "market_event_v1",
+        "source": "local-replay",
+        "symbol": "BTCUSDT",
+        "market": "USDT-M",
+        "timeframe": "1m",
+        "event_time_start_utc": "2026-08-21T22:02:00Z",
+        "event_time_end_utc": "2026-08-28T20:41:00Z",
+        "send_elapsed_seconds": 1.532,
+        "send_records_per_second": 6853.786,
+        "total_elapsed_seconds": 1.578
+      },
+      "consumer": {
+        "status": "success",
+        "topic": "assignment5.market.events.v1",
+        "run_id": "assignment5-load_10000-20260831T014703Z",
+        "consumer_group_id": "assignment5-load_10000-20260831T014703Z-consumer-9adadde1",
+        "consumer_received_count": 10000,
+        "consumer_matching_message_count": 10500,
+        "duplicate_message_count": 500,
+        "expected_count": 10000,
+        "raw_jsonl_path": "<PROJECT_ROOT>\\assignment5_pipeline_resilience\\data\\load_10000_consumed.jsonl",
+        "elapsed_seconds": 4.078,
+        "unique_records_per_second": 2452.182
+      },
+      "consumed_path": "assignment5_pipeline_resilience\\data\\load_10000_consumed.jsonl",
+      "prepare_elapsed_seconds": 0.187,
+      "flink": {
+        "status": "success",
+        "processor": "apache_flink_pyflink_batch",
+        "flink_job_id": "08e3fad0007754619f5878d65e91b3e3",
+        "run_id": "assignment5-load_10000-20260831T014703Z",
+        "flink_input_raw_count": 10000,
+        "flink_input_valid_count": 10000,
+        "flink_output_processed_count": 10000,
+        "dropped_count_before_flink": 0,
+        "storage_format": "parquet",
+        "feature_schema_version": "ohlcv_basic_v2_boundary4",
+        "feature_files": [
+          "assignment5_pipeline_resilience\\output\\load_10000\\market=usdm\\symbol=BTCUSDT\\timeframe=1m\\year=2026\\month=08\\features_assignment5-load_10000-20260831T014703Z_202608.parquet"
+        ],
+        "final_columns": [
+          "timestamp",
+          "datetime_utc",
+          "symbol",
+          "market",
+          "timeframe",
+          "run_id",
+          "open",
+          "high",
+          "low",
+          "close",
+          "volume",
+          "ma_5",
+          "return_1m",
+          "feature_schema_version",
+          "event_time_ms",
+          "timestamp_unit",
+          "metadata_schema_version"
+        ],
+        "flink_features": [
+          "ma_5",
+          "return_1m"
+        ],
+        "flink_elapsed_seconds": 8.266
+      },
+      "total_pipeline_seconds": 12.875
+    }
+  ],
+  "fault_and_recovery": {
+    "fault": "missing_close_field",
+    "input_path": "assignment5_pipeline_resilience\\data\\fault_invalid_missing_close.jsonl",
+    "expected_failure": true,
+    "process_return_code": 1,
+    "failure_reproduced": true,
+    "error_tail": "RuntimeError: Flink input preparation produced no valid events.",
+    "recovery_action": "Validated baseline JSONL was prepared and submitted to PyFlink again.",
+    "recovery": {
+      "name": "recovery_1000",
+      "source_path": "assignment5_pipeline_resilience\\data\\baseline_1000_consumed.jsonl",
+      "expected_rows": 1000,
+      "prepare_elapsed_seconds": 0.093,
+      "input": {
+        "status": "success",
+        "raw_jsonl_count": 1000,
+        "valid_flink_input_count": 1000,
+        "invalid_ohlcv_count": 0,
+        "duplicate_event_id_count": 0,
+        "run_id": "assignment5-baseline_1000-20260831T014703Z",
+        "output_csv_path": "<PROJECT_ROOT>\\assignment5_pipeline_resilience\\data\\recovery_1000_flink_input.csv",
+        "flink_input_columns": [
+          "timestamp",
+          "open",
+          "high",
+          "low",
+          "close",
+          "volume",
+          "run_id",
+          "symbol",
+          "market",
+          "timeframe"
+        ]
+      },
+      "flink": {
+        "status": "success",
+        "processor": "apache_flink_pyflink_batch",
+        "flink_job_id": "10a25bbb76ecde40b0b1106aabd34e4a",
+        "run_id": "assignment5-baseline_1000-20260831T014703Z",
+        "flink_input_raw_count": 1000,
+        "flink_input_valid_count": 1000,
+        "flink_output_processed_count": 1000,
+        "dropped_count_before_flink": 0,
+        "storage_format": "parquet",
+        "feature_schema_version": "ohlcv_basic_v2_boundary4",
+        "feature_files": [
+          "assignment5_pipeline_resilience\\output\\recovery_1000\\market=usdm\\symbol=BTCUSDT\\timeframe=1m\\year=2026\\month=08\\features_assignment5-baseline_1000-20260831T014703Z_202608.parquet"
+        ],
+        "final_columns": [
+          "timestamp",
+          "datetime_utc",
+          "symbol",
+          "market",
+          "timeframe",
+          "run_id",
+          "open",
+          "high",
+          "low",
+          "close",
+          "volume",
+          "ma_5",
+          "return_1m",
+          "feature_schema_version",
+          "event_time_ms",
+          "timestamp_unit",
+          "metadata_schema_version"
+        ],
+        "flink_features": [
+          "ma_5",
+          "return_1m"
+        ],
+        "flink_elapsed_seconds": 7.61
+      }
+    },
+    "recovery_output_rows": 1000
+  },
+  "validation": {
+    "expected_checks": [
+      "Kafka unique count equals requested count",
+      "Flink output count equals Kafka unique count",
+      "intentional duplicate count is detected exactly",
+      "invalid input fails safely",
+      "validated input is rerun after the fault and restores the expected rows"
+    ],
+    "errors": [],
+    "healthy": true
+  }
+}

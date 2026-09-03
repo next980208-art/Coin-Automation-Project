@@ -1,0 +1,26 @@
+{
+  "generated_at_utc": "2026-09-03T02:48:00.572848+00:00",
+  "alert": {
+    "triggered": true,
+    "severity": "ERROR",
+    "code": "REQUIRED_FIELD_MISSING",
+    "failed_stage": "input validation before Flink submission",
+    "fault": "missing_close_field",
+    "process_return_code": 1,
+    "message": "RuntimeError: Flink input preparation produced no valid events.",
+    "delivery": "local JSON report and log",
+    "external_notification_configured": false
+  },
+  "fallback": {
+    "triggered": true,
+    "strategy": "reuse the last validated JSONL and restart from Flink input preparation",
+    "kafka_replay_required": false,
+    "recovery_job_id": "10a25bbb76ecde40b0b1106aabd34e4a",
+    "expected_rows": 1000,
+    "stored_rows": 1000,
+    "duplicate_timestamps": 0,
+    "missing_required_values": 0,
+    "succeeded": true
+  },
+  "final_status": "resolved"
+}

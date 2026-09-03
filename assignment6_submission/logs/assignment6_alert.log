@@ -1,0 +1,11 @@
+ALERT_TRIGGERED=true
+ALERT_CODE=REQUIRED_FIELD_MISSING
+FAILED_STAGE=input validation before Flink submission
+PROCESS_RETURN_CODE=1
+ERROR=RuntimeError: Flink input preparation produced no valid events.
+FALLBACK=validated JSONL -> Flink input preparation -> PyFlink Batch -> Parquet
+RECOVERY_JOB_ID=10a25bbb76ecde40b0b1106aabd34e4a
+RECOVERY_EXPECTED_ROWS=1000
+RECOVERY_STORED_ROWS=1000
+FALLBACK_SUCCEEDED=true
+FINAL_STATUS=resolved

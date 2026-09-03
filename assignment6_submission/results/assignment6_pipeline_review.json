@@ -1,0 +1,79 @@
+{
+  "assignment": "6차시 부하·복구 결과 보완 및 전체 흐름 점검",
+  "generated_at_utc": "2026-09-03T02:48:00.573844+00:00",
+  "source_experiment_executed_at_utc": "2026-08-31T01:47:37.115752+00:00",
+  "source_data": {
+    "type": "local replay derived from saved real Binance USDT-M BTCUSDT OHLCV",
+    "source_file": "assignment4_kafka_spark\\data\\consumed_binance_usdm_events.jsonl",
+    "external_load_sent": false
+  },
+  "processing_engine": "Apache Flink PyFlink Batch (project standard; Spark is not used)",
+  "pipeline": "local JSONL -> Kafka -> consumer JSONL -> PyFlink Batch -> Parquet",
+  "baseline_and_load": [
+    {
+      "name": "baseline_1000",
+      "run_id": "assignment5-baseline_1000-20260831T014703Z",
+      "producer_sent_count": 1000,
+      "expected_unique_count": 1000,
+      "consumer_unique_count": 1000,
+      "intentional_duplicate_count": 0,
+      "consumer_detected_duplicate_count": 0,
+      "flink_input_count": 1000,
+      "final_parquet_count": 1000,
+      "filtered_count": 0,
+      "unexpected_unprocessed_count": 0,
+      "kafka_seconds": 3.094,
+      "flink_seconds": 7.953,
+      "total_pipeline_seconds": 11.141,
+      "producer_records_per_second": 3759.398,
+      "consumer_unique_records_per_second": 372.162,
+      "final_rows_per_second": 89.759,
+      "parquet_duplicate_timestamps": 0,
+      "parquet_missing_required_values": 0,
+      "errors": [],
+      "healthy": true
+    },
+    {
+      "name": "load_10000",
+      "run_id": "assignment5-load_10000-20260831T014703Z",
+      "producer_sent_count": 10500,
+      "expected_unique_count": 10000,
+      "consumer_unique_count": 10000,
+      "intentional_duplicate_count": 500,
+      "consumer_detected_duplicate_count": 500,
+      "flink_input_count": 10000,
+      "final_parquet_count": 10000,
+      "filtered_count": 500,
+      "unexpected_unprocessed_count": 0,
+      "kafka_seconds": 4.422,
+      "flink_seconds": 8.266,
+      "total_pipeline_seconds": 12.875,
+      "producer_records_per_second": 6853.786,
+      "consumer_unique_records_per_second": 2452.182,
+      "final_rows_per_second": 776.699,
+      "parquet_duplicate_timestamps": 0,
+      "parquet_missing_required_values": 0,
+      "errors": [],
+      "healthy": true
+    }
+  ],
+  "comparison": {
+    "unique_input_multiplier": 10.0,
+    "elapsed_time_multiplier": 1.156,
+    "final_throughput_multiplier": 8.653
+  },
+  "failure_and_restart": {
+    "failed_stage": "input validation before Flink submission",
+    "failure_reproduced": true,
+    "process_return_code": 1,
+    "restart_location": "validated JSONL -> Flink input preparation",
+    "recovery_job_id": "10a25bbb76ecde40b0b1106aabd34e4a",
+    "recovery_expected_rows": 1000,
+    "recovery_stored_rows": 1000
+  },
+  "alert_and_fallback_report": "results\\assignment6_alert_and_fallback.json",
+  "validation": {
+    "errors": [],
+    "healthy": true
+  }
+}
